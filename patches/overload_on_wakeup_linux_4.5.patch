@@ -40,3 +40,11 @@
  	for_each_domain(cpu, tmp) {
  		if (!(tmp->flags & SD_LOAD_BALANCE))
  			break;
+@@ -5173,6 +5173,7 @@
+ 		}
+ 		/* while loop will break here if sd == NULL */
+ 	}
++unlock:	
+ 	rcu_read_unlock();
+ 
+ 	return new_cpu;
